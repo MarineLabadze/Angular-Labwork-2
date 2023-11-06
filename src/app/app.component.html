@@ -1,0 +1,11 @@
+<app-users (usersAdded)="displayUsers($event)"></app-users>
+<div *ngFor="let user of displayedUsers">
+  <div *ngIf="calculateAge(user.dateOfBirth) <= 25">
+
+    <p>{{ user.firstName }} {{ user.lastName }}</p>
+    <p>Date of Birth: {{ user.dateOfBirth }}</p>
+    <p>Phone Number: {{ user.phoneNumber }}</p>
+    <p>Email: {{ user.email }}</p>
+  </div>
+</div>
+
